@@ -21,7 +21,7 @@ const SignUp = () => {
       <h2 className="text-center text-4xl font-bold text-black">
         <span className="text-black">Furni</span><span className="text-blue-500">Flex</span>
       </h2>
-      <p className="text-center text-gray-500">Signup for purch Fill x Hug desire products</p>
+      <p className="text-center text-gray-500">Signup to purchase and explore desired products</p>
       <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
         <div className="grid grid-cols-2 gap-4">
           <input
@@ -37,7 +37,7 @@ const SignUp = () => {
             className="p-2 border rounded"
           />
         </div>
-
+  
         <div className="mt-4">
           <input
             type="email"
@@ -47,7 +47,7 @@ const SignUp = () => {
           />
           {errors.email && <p className="text-red-500">{errors.email.message}</p>}
         </div>
-
+  
         <div className="mt-4 relative">
           <input
             type="password"
@@ -58,13 +58,12 @@ const SignUp = () => {
           <button
             type="button"
             className="absolute right-3 top-2 text-gray-500"
-            // Add show/hide password logic here
           >
             👁️
           </button>
           {errors.password && <p className="text-red-500">{errors.password.message}</p>}
         </div>
-
+  
         <div className="mt-4">
           <label className="flex items-center">
             <input
@@ -76,34 +75,38 @@ const SignUp = () => {
           </label>
           {errors.terms && <p className="text-red-500">{errors.terms.message}</p>}
         </div>
-
+  
         <button
           type="submit"
           className="w-full bg-black text-white py-2 mt-4 rounded"
         >
           Signup
         </button>
-
+  
         <div className="text-center mt-4">
           <p>or</p>
           <div className="flex justify-between mt-4">
             <button className="bg-white border border-gray-300 text-gray-500 flex items-center justify-center py-2 px-4 w-1/2 mr-2 rounded">
-              <img src="google-icon.svg" alt="Google" className="w-5 mr-2" />
+              <img src={googleicon} alt="Google" className="w-5 mr-2" />
               Sign in with Google
             </button>
             <button className="bg-white border border-gray-300 text-gray-500 flex items-center justify-center py-2 px-4 w-1/2 rounded">
-              <img src="apple-icon.svg" alt="Apple" className="w-5 mr-2" />
+              <img src={appleicon} alt="Apple" className="w-5 mr-2" />
               Sign in with Apple
             </button>
           </div>
         </div>
-
+  
         <div className="text-center mt-4">
           <p>Have an account? <a href="#" className="text-blue-500">Sign In</a></p>
         </div>
       </form>
     </div>
+    <div className="hidden md:block ml-6">
+      <img src={img} alt="Decorative" />
+    </div>
   </div>
+  
   );
 };
 
